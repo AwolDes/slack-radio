@@ -1,7 +1,7 @@
-# Slack Radio
+# Slack Radio [![Build Status](https://travis-ci.org/EnLab/slack-radio.svg?branch=master)](https://travis-ci.org/EnLab/slack-radio)
 A simple colaborative room for users that want to listen music together.
 
-# Building 
+# Building
 
 1. Check issues.
 2. Send a PR, follow the patterns for frontend and backend.

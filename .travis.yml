@@ -1,0 +1,25 @@
+---
+language: node_js
+node_js:
+  - "0.12"
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+    - bower_components
+    - persistent-filter-caches
+
+before_install:
+  - "npm config set spin false"
+  - "npm install -g npm@^2"
+  - "npm --version"
+  - "phantomjs --version"
+
+install:
+  - "npm install --no-optional"
+
+branches:
+  only:
+    - master
