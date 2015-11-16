@@ -1,10 +1,12 @@
 <form>
     <label>Youtube Link:
-        {{input id="videoID" type="text" placeholder="link"}}
+        {{input id="videoID" type="text" placeholder="link" value=youtubeLink}}
     </label>
-    <button {{action 'contract'}}>Contract</button>
+    <button {{action 'play' youtubeLink}}>Play</button>
     
 </form>
+
+{{ember-youtube ytid=youtubeLink autoplay=true}}
 
 
 

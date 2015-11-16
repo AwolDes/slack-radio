@@ -11,11 +11,8 @@ export default Ember.Route.extend({
     }*/
     
     actions: {
-        contract: function() {
-                console.log("clicked");
-                var id = this.get('videoID');
-                this.this.set('videoID', '');
-                console.log(id);
+        play: function(link) {
+                console.log(link);
             }
         }
     
