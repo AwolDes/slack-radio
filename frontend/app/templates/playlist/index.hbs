@@ -1,28 +1,24 @@
 <h1>Play song</h1>
 
-
-<section>
-    <ul>
-    {{#each song in model}}
-      <li>{{song.videoId}}</li>
-      <li>{{song.title}}</li>
-      <li>{{song.artist}}</li>
-    {{/each}}
-    </ul>
-</section>
-
-
-
 <form>
     <label>Youtube Link:
         {{input id="videoID" type="text" placeholder="link" value=videoId}}
         {{input id="videoTitle" type="text" placeholder="Poker Face" value=title}}
         {{input id="videoArtist" type="text" placeholder="Lady GaGa" value=artist}}
     </label>
-    <button {{action 'save' videoId title artist}}>Play</button>
+    <button {{action 'save' videoId title artist}}>Add</button>
     
 </form>
 
-{{partial "playlist/form"}}
+
+{{ember-youtube ytid=videoId autoplay=true}}
+
+<ul>
+    {{#each model as |song|}}
+    <!--<li>{{song.videoId}}</li>-->
+    <li>{{song.title}} - {{song.artist}}</li>
+    {{/each}}
+</ul>
+
 
 {{outlet}}
