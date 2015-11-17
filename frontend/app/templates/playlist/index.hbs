@@ -11,7 +11,7 @@
 </form>
 
 
-{{ember-youtube ytid=videoId autoplay=true}}
+
 
 <p>Songs in Playlist: {{model.length}}</p>
 
@@ -19,6 +19,7 @@
     {{#each model as |song|}}
     <!--<li>{{song.videoId}}</li>-->
     <li>{{song.title}} - {{song.artist}}</li>
+    {{ember-youtube ytid=song.videoId autoplay=false}}
     {{/each}}
 </ul>
 
