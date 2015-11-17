@@ -3,6 +3,7 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 [Ll]ogs/
+*.log
 
 # Linux
 .directory
