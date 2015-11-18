@@ -1,5 +1,5 @@
-<h1>Play song</h1>
-
+<h1>Play Song</h1>
+<p>{{url}}</p>
 <form>
     <label>Youtube Link:
         {{input id="videoID" type="text" placeholder="link" value=videoId}}
@@ -10,14 +10,14 @@
     
 </form>
 
-{{ember-youtube ytid=model.firstObject.videoId autoplay=false playing="ytPlaying" ended="ytEnded"}}
+{{ember-youtube ytid=link autoplay=false playing="ytPlaying" ended="ytEnded"}}
 
 <p>Songs in Playlist: {{model.length}}</p>
 
 <ul>
     {{#each model as |song|}}
     <!--<li>{{song.videoId}}</li>-->
-    <li>{{song.title}} - {{song.artist}}</li>
+    <li {{action "getId" song.videoId song.title song.artist}}>{{song.title}} - {{song.artist}}</li>
     {{/each}}
 </ul>
 

@@ -1,9 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-   /* playlist:this.get('model'),
-    songs:playlist.get('songs'),
-    youtubeId:songs.get([0]),*/
+
+    firstLink:Ember.computed.alias('model.firstObject.videoId'),
+    
+    // Make this equal firstLink
+    link:"",
+
     actions: {
         save: function(link, name, singer) {
             console.log(link);
@@ -39,17 +42,24 @@ export default Ember.Controller.extend({
         ytPlaying: function() {
             Ember.debug('on playing from controller');
             
+            //Ember.debug(data);
             return false;
         },
         
         ytEnded: function() {
             Ember.debug('on ended from controller');
             //Ember.debug(ytid);
-            // here you could load another video by changing the youTubeId
-            //this.set('youtubeId', 'dQw4w9WgXcQ');
+            
+            var nextId = "";
+            this.set('link', nextId)
             
             return false;
+        },
+        
+        getId:function(id, title, singer){
+            console.log(id);
+            this.set('link','')
+            this.set('link',id)
         }
     }
-       
 });
