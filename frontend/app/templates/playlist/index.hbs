@@ -10,7 +10,7 @@
     
 </form>
 
-{{ember-youtube ytid=model.firstObject.videoId autoplay=false}}
+{{ember-youtube ytid=model.firstObject.videoId autoplay=false playing="ytPlaying" ended="ytEnded"}}
 
 <p>Songs in Playlist: {{model.length}}</p>
 
