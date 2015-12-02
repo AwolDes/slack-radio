@@ -1,25 +1,42 @@
-<h1>Play Song</h1>
-<p>{{url}}</p>
-<form>
-    <label>Youtube Link:
-        {{input id="videoID" type="text" placeholder="link" value=videoId}}
-        {{input id="videoTitle" type="text" placeholder="Poker Face" value=title}}
-        {{input id="videoArtist" type="text" placeholder="Lady GaGa" value=artist}}
-    </label>
-    <button {{action 'save' videoId title artist}}>Add</button>
-    
-</form>
+<div class="player">
+   <div class="music">
+        <div class="add-song">
+            <form class="add-music">
+                <label>Add Song:
+                    {{input id="videoID" class="input-song" type="text" placeholder="link" value=videoId}}
+                    {{input id="videoTitle" class="input-song" type="text" placeholder="Poker Face" value=title}}
+                    {{input id="videoArtist" class="input-song" type="text" placeholder="Lady GaGa" value=artist}}
+                </label>
+                <button {{action 'save' videoId title artist}}>Add</button>
 
-{{ember-youtube ytid=link autoplay=false playing="ytPlaying" ended="ytEnded"}}
+            </form>
+            
+            <div class="members">
+                <label>Others listening</label>
+                <ul class="listeners">
+                    <li class="listener">Listener 1</li>
+                    <li class="listener">Listener 2</li>
+                    <li class="listener">Listener 3</li>
+                    <li class="listener">Listener 4</li>
+                    <li class="listener">Listener 5</li>
+                </ul>
+            </div>
+        </div>
 
-<p>Songs in Playlist: {{model.length}}</p>
+        {{ember-youtube ytid=newLink autoplay=true playing="ytPlaying" ended="ytEnded" class="video"}}
+        </div>
+    <div class="playlist">
+        <p>Songs in Playlist: {{model.length}}</p>
+        <p>Currently Playing: {{currentSong}} - {{currentArtist}}</p>
 
-<ul>
-    {{#each model as |song|}}
-    <!--<li>{{song.videoId}}</li>-->
-    <li {{action "getId" song.videoId song.title song.artist}}>{{song.title}} - {{song.artist}}</li>
-    {{/each}}
-</ul>
+        <ul>
+            {{#each model as |song|}}
+            <!--<li>{{song.videoId}}</li>-->
+            <li class="song"{{action "getId" song.videoId song.title song.artist}}>{{song.title}} - {{song.artist}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
 
 
 {{outlet}}
