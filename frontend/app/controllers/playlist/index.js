@@ -79,10 +79,10 @@ export default Ember.Controller.extend({
             return false;
         },
         // Click on song, plays it.
-        getId:function(id, title, singer){
+        getId:function(id, title, singer, index){
             console.log(id);
-            //this.set('newLink','')
-            this.set('songPos', pos)
+            console.log(index)
+            //this.set('songPos', pos)
             this.set('newLink',id)
         }
     }
