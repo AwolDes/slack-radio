@@ -43,7 +43,7 @@ export default Ember.Controller.extend({
             }
             
             
-            var addSong = this.store.createRecord('playlists/songs', {
+            var addSong = this.store.createRecord('playlist/songs', {
                 videoId:newLink,
                 title:name,
                 artist:singer
