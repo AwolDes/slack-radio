@@ -9,10 +9,10 @@
                     {{input id="videoTitle" class="input-song" type="text" placeholder="Poker Face" value=title}}
                     {{input id="videoArtist" class="input-song" type="text" placeholder="Lady GaGa" value=artist}}
                 </label>
-                <button class="add-btn"{{ action 'save' videoId title artist}}>Add</button>
+                <button class="action-btn"{{ action 'save' videoId title artist}}>Add</button>
 
             </form>
-            
+            <!--
             <div class="members">
                 <label>Others listening</label>
                 <ul class="listeners">
@@ -22,7 +22,7 @@
                     <li class="listener">Listener 4</li>
                     <li class="listener">Listener 5</li>
                 </ul>
-            </div>
+            </div>-->
         </div>
 
         {{ember-youtube ytid=newLink autoplay=false playing="ytPlaying" ended="ytEnded" class="video"}}

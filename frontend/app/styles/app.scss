@@ -13,7 +13,7 @@
     
 }
 
-.add-btn{
+.action-btn{
     background-color: $addBtnPrimary;
     border-style: none;
     width:70px;
@@ -78,9 +78,47 @@
     
 }
 
+.action{
+    width:60%;
+    height:400px;
+    background-color: #e74c3c;
+    text-align: center;
+    color:white;
+    margin-left: 17%;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.contents{
+    font-family: 'Raleway', sans-serif;
+    padding-top:30px;
+    font-size: 30px;
+}
+
+.go-time{
+    width:200px;
+    height:30px;
+    border-radius: 3px;
+    border:none;
+    box-shadow: none;
+    
+    -webkit-transition: all 0.5s ease-in-out;
+    
+    
+    &:focus{
+        background-color: #E0E0E0;
+    }
+}
+
+
+
+
 body{
     margin:0;
     padding:0;
+    background:#8e44ad;
+    color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,7 +1,12 @@
-<h2 id="title">Welcome to Slack-Radio</h2>
-<form {{action "submit" on="submit"}}>
-            {{input type="text" value=playlist required="true"}}
-            <p>
-              <button class="uk-button uk-button-primary uk-button-large" type="submit">enter</button>
-            </p>
-          </form>
+<div class="action">
+   <div class="contents">
+    <h2 id="title">Welcome to Slack-Radio</h2>
+        <p>Your decks name</p>
+        <form {{action "submit" on="submit"}}>
+                    {{input class="go-time" type="text" value=playlist required="true" placeholder="Deck Name"}}
+                    <p>
+                      <button class="action-btn" type="submit">Go!</button>
+                    </p>
+        </form>
+    </div>
+</div>
