@@ -16,14 +16,14 @@
   margin-bottom: 7px; }
 
 .action-btn {
-  background-color: #9b59b6;
+  background-color: #4c9689;
   border-style: none;
   width: 70px;
   height: 30px;
   color: white;
   border-radius: 5px; }
   .action-btn:hover {
-    background-color: #804399;
+    background-color: #43857a;
     cursor: pointer; }
 
 .add-music {
@@ -42,12 +42,34 @@
 
 .music {
   width: 100%;
-  background-color: #e74c3c;
-  color: white;
-  padding-bottom: 40px; }
+  background-color: white;
+  color: black; }
+
+.playlist-info {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  width: 100%;
+  background-color: #455A64; }
+
+ul, li {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0; }
 
 .playlist {
-  margin-left: 50px; }
+  list-style: none; }
+
+.info {
+  margin-left: 13px; }
+
+.song {
+  padding: 10px;
+  border-bottom: 1px solid #424242;
+  background-color: #F44336;
+  -webkit-transition: all 0.5s ease-in-out; }
+  .song:hover {
+    background-color: #f55a4e; }
 
 .members {
   position: absolute;
@@ -69,7 +91,8 @@
   color: white;
   margin-left: 17%;
   margin-top: 100px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px black; }
 
 .contents {
   font-family: 'Raleway', sans-serif;
@@ -82,14 +105,16 @@
   border-radius: 3px;
   border: none;
   box-shadow: none;
-  -webkit-transition: all 0.5s ease-in-out; }
+  -webkit-transition: all 0.5s ease-in-out;
+  background-color: white; }
   .go-time:focus {
-    background-color: #E0E0E0; }
+    border-color: aqua; }
 
 body {
   margin: 0;
   padding: 0;
-  background: #8e44ad;
+  overflow: auto;
+  background: #4D394B;
   color: white;
   font-family: 'Raleway', sans-serif; }
 

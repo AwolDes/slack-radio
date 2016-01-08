@@ -9,13 +9,13 @@ export default Ember.Controller.extend({
             });
             newRoom.save();
             
-            var newPlaylist = this.store.createRecord('rooms/songs', {
+            /*var newPlaylist = this.store.createRecord('rooms/songs', {
                 videoId:"oXdfGFIEZIc",
                 title:"default video",
                 artist:"a random clip"
             });
             console.log(newPlaylist);
-            newPlaylist.save();
+            newPlaylist.save();*/
             
             this.transitionToRoute('playlist', this.get('playlist'));
         },

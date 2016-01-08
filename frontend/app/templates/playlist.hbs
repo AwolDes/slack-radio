@@ -5,7 +5,7 @@
         <div class="add-song">
             <form class="add-music">
                 <label>Add Song:
-                    {{input id="videoID" class="input-song" type="text" placeholder="Link" value=videoId}}
+                    {{input id="videoID" class="input-song" type="text" placeholder="https://www.youtube.com/watch?v=bESGLojNYSo" value=videoId}}
                     {{input id="videoTitle" class="input-song" type="text" placeholder="Poker Face" value=title}}
                     {{input id="videoArtist" class="input-song" type="text" placeholder="Lady GaGa" value=artist}}
                 </label>
@@ -27,11 +27,11 @@
 
         {{ember-youtube ytid=newLink autoplay=false playing="ytPlaying" ended="ytEnded" class="video"}}
         </div>
-    <div class="playlist">
-        <p>Songs in Playlist: {{model.length}}</p>
-        <p>Currently Playing: {{currentSong}} - {{currentArtist}}</p>
+    <div class="playlist-info">
+        <p class="info">Songs in Playlist: {{model.length}}</p>
+        <p class="info">Currently Playing: {{currentSong}} - {{currentArtist}}</p>
 
-        <ul>
+        <ul class="playlist">
             {{#each model as |song index|}}
             <!--<li>{{song.videoId}}</li>-->
             <li class="song"{{action "getId" song.videoId song.title song.artist index}}>{{song.title}} - {{song.artist}}</li>
