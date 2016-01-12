@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-
     // Make this equal firstLink
     newLink:Ember.computed.alias('model.firstObject.videoId'),
     currentSong:Ember.computed.alias('model.firstObject.title'),
@@ -42,11 +41,13 @@ export default Ember.Controller.extend({
                 var newLink = r[1];
             }
             
-            var room = this.get('room');
+            /*var playlist = this.store.peekRecord('room', 1);
+            console.log(playlist)*/
             var addSong = this.store.createRecord('song', {
                 videoId:newLink,
                 title:name,
-                artist:singer
+                artist:singer,
+                //room:playlist
             });
             addSong.save();
            

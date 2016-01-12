@@ -4,7 +4,7 @@ export default DS.Model.extend({
     videoId: DS.attr('string'),
     title: DS.attr('string'),
     artist: DS.attr('string'),
-    playlist: DS.belongsTo('room')
+    room: DS.belongsTo('room')
 });
 
 
